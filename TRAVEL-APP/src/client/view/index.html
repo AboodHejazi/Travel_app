@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Travel Planner</title>
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+  <header class="header">
+    <div class="header-content">
+      <h1 class="title"><i class="fas fa-globe"></i> Plan Your Journey</h1>
+      <p class="subtitle">A smarter way to explore the world, one trip at a time.</p>
+      <div class="icon-row">
+        <i class="fas fa-map-marked-alt icon"></i>
+        <i class="fas fa-plane-departure icon"></i>
+        <i class="fas fa-suitcase-rolling icon"></i>
+      </div>
+    </div>
+  </header>
+  <main>
+    <section class="form-container">
+      <h2>Plan Your Trip</h2>
+      <form id="travel-form">
+        <div class="form-group">
+          <label for="destination">Destination</label>
+          <input type="text" id="destination" name="destination" placeholder="Enter your destination" required>
+        </div>
+        <div class="form-group">
+          <label for="departure-date">Departure Date</label>
+          <input type="date" id="departure-date" name="departure-date" required min="" >
+        </div>
+        <button type="submit" class="btn" id="submit">Submit <i class="fas fa-arrow-right"></i></button>
+      </form>
+    </section>
+
+    <section class="features">
+      <div class="feature-box">
+        <i class="fas fa-cloud-sun"></i>
+        <p>Get weather updates for your destination.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-camera-retro"></i>
+        <p>See stunning visuals of your destination.</p>
+      </div>
+      <div class="feature-box">
+        <i class="fas fa-lightbulb"></i>
+        <p>Receive tips and insights for your journey.</p>
+      </div>
+    </section>
+
+    <section id="results" class="results-container">
+      <h2>Your Trip Details</h2>
+      <div id="weather-info" class="info-box"></div>
+      <div id="location-image" class="info-box"></div>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; 2025 Travel Planner | Adventure begins here. | Abdulrahman Hejazi |<span> Linkedin ==> <a href="https://www.linkedin.com/public-profile/settings?trk=d_flagship3_profile_self_view_public_profile" target="_blank">
+      <i class="fab fa-linkedin"></i>
+    </a></span></p>
+  </footer>
+  <script src="bundle.js"></script>
+  <script>
+    if ('serviceWorker' in navigator) {
+        window.addEventListener('load', () => {
+            navigator.serviceWorker.register('/service-worker.js')
+                .then(reg => console.log("Service Worker Registered!", reg))
+                .catch(err => console.log("Service Worker Registration Failed:", err));
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,35 @@
+# Travel Planner App
+
+This is a responsive travel planner app that allows users to plan their trips, view weather data, and explore their destinations. Built with Webpack, Babel, Express, and various APIs.
+
+## Installation
+
+1. Clone this repo.
+2. Run `npm install` to install dependencies.
+3. Create a `.env` file and add your API keys:
+    ```text
+    GEO_API_KEY=your-geo-api-key
+    WEATHER_API_KEY=your-weather-api-key
+    PIXABAY_API_KEY=your-pixabay-api-key
+    ```
+4. Run `npm run build` to build the app.
+5. Run `npm start` to start the server.
+
+## Features
+
+- Weather updates for destinations.
+- Images of destinations via the Pixabay API.
+- Simple form to plan trips.
+
+## Testing
+
+Run `npm run test` to execute tests.
+
+## License
+
+MIT
+## Requirements  
+- Node.js v20.18.3 or higher  
+- npm (included with Node.js)
+
+# we removed node_modules to reduse the size , you should to reinstall it
